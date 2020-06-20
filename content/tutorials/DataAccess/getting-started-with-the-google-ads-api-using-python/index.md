@@ -18,7 +18,7 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 1
 ---
-
+##Introduction
 Getting started with the Google Ads API can sometimes be a frustrating experience. There's lots of steps, and the online tutorials can be hard to follow. Here we try to describe the process step by step in one fell swoop.
 
 Don't get discouraged. It's a lot, but you'll get there. Here's what we're going to do:
