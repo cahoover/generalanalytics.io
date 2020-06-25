@@ -1,8 +1,8 @@
 ---
 # Course title, summary, and position.
 linktitle: Data Access
-summary: Learn how to use Academic's docs layout for publishing online courses, software documentation, and tutorials.
-weight: 1
+summary: To perform data science, you need to collect and wrangle data. These tutorials will cover tools and techniques for this.
+weight: 2
 
 # Page metadata.
 title: Overview
@@ -16,7 +16,7 @@ type: docs  # Do not modify.
 # - name: Declare this menu item as a parent with ID `name`.
 # - weight: Position of link in menu.
 menu:
-  example:
+  DataAccess:
     name: Overview
     weight: 1
 ---

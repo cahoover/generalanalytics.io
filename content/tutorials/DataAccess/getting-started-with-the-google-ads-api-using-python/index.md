@@ -11,8 +11,8 @@ type: docs
 date: "2020-04-15"
 draft: false
 menu:
-  example:
-    parent: Example Topic
+  DataAccess:
+    parent: API Access
     weight: 1
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)

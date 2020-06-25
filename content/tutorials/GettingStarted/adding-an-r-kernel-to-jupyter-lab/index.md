@@ -8,8 +8,8 @@ draft: false
 authors:
 - Martin Frigaard
 menu:
-  example:
-    parent: Example Topic
+  GettingStarted:
+    parent: Jupyter
     weight: 1
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)

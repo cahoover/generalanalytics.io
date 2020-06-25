@@ -1,0 +1,29 @@
+{{- define "main" -}}
+
+<section id="post" class="home-section wg-pages">
+
+{{ partial "page_header.html" . }}
+
+<div class="col-12 col-lg-8">
+
+  {{ with .Content }}
+  <div class="article-style">{{ . }}</div>
+  {{ end }}
+
+  {{ $paginator := .Paginate .Data.Pages }}
+  {{ range $paginator.Pages }}
+    {{ if eq $.Params.view 1 }}
+      {{ partial "li_list" . }}
+    {{ else if eq $.Params.view 3 }}
+      {{ partial "li_card" . }}
+    {{ else }}
+      {{ partial "li_compact" . }}
+    {{ end }}
+  {{ end }}
+
+  {{ partial "pagination" . }}
+
+</div>
+</section>
+
+{{- end -}}

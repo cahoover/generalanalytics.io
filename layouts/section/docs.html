@@ -1,0 +1,28 @@
+{{- define "main" -}}
+
+{{/* Set default titles for node pages */}}
+{{ $title := .Title }}
+
+<section id="courses" class="home-section">
+<div class=container>
+  <div class=row>
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>{{ $title }}</h1>
+    </div>
+    <div class="col-12 col-lg-8">
+   {{ with .Content }}
+   <div class="article-style">{{ . }}</div>
+   {{ end }}
+  <ul class="list-unstyled">
+    {{ if gt (len .Sections) 0}}
+    {{ range .Sections }}
+    <li><h5><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></h5> {{with .Params.summary}}<p>{{. | plainify | emojify}}</p>{{end}}</li>
+    {{end}}
+    {{end}}
+  </ul>
+</div>
+</div>
+</div>
+</section>
+
+{{- end -}}
