@@ -22,8 +22,12 @@ body {
   background-color: #fff;
 }
 
+.hljs {
+  background: #e8e8e8;
+}
+
 .docs-content {
-  background-image: linear-gradient(rgba(231, 234, 243, 0.5), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, rgba(55, 125, 255, 0.075) 0%, rgba(55, 125, 255, 0.15) 100%);
 }
 
 #experience .card-text {
