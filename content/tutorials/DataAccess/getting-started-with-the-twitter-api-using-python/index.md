@@ -8,7 +8,7 @@ categories: []
 lastMod: "2020-05-20"
 toc: true
 type: docs
-date: "2020-05-20"
+date: "2020-06-27"
 draft: false
 menu:
   DataAccess:
@@ -68,7 +68,11 @@ Once you create your app, you can access both your developer tokens and the app 
 
 ## Get the tokens ready for use
 
-When we write code that uses the Twitter API, we'll need to use these tokens. Instead of placing the tokens directly in the code, it's easiest to reference them. What we'll do is create a snippet of Python called credentials.py that is imported into the code we write. That way you can create all sorts of API calls without having to worry about tokens.
+When we write code that uses the Twitter API, we'll use these tokens to authenticate. It's similar to a username and password.
+
+One way to do this is to add the tokens directly to code. But that's a hassle because you wind up hunting around for them and copying and pasting. Better to store your tokens in a file and reference them.
+
+To do this we'll create a snippet of Python called credentials.py that is imported into the code we write. That way you can create all sorts of API calls without having to worry about tokens.
 
 Open your terminal and navigate to the folder you're going to use to contain the code you write to practices with the Twitter API. Nano is a common terminal text editor, and we'll use it to create your credentials file.
 
@@ -79,11 +83,11 @@ nano credentials.py
 When the editor opens, type the following
 
 ```
-#credentials.py
-API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXX'
-API_SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-ACCESS_TOKEN = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-ACCESS_TOKEN_SECRET = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX'
+#twitter credentials
+TWIT_API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXX'
+TWIT_API_SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+TWIT_ACCESS_TOKEN = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+TWIT_ACCESS_TOKEN_SECRET = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 ```
 
@@ -91,7 +95,7 @@ Make sure you replace XXX with the actual tokens!
 
 Press control-X, save your file, and exit.
 
-## Create a client {#Step-7}
+## Create a client
 
 To use the Twitter API, we need to install a Python library that understands how to use it. Official Twitter libraries are available only for the premium and enterprise API, so we'll be using a community developed library. There are many, and you can find a list of them on the [Twitter developer site.](https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries)
 
@@ -131,10 +135,10 @@ from tweepy import OAuthHandler #The authentication function from Tweepy
 
 def set_twitter_auth():
     try:
-        api_key = credentials.API_KEY
-        api_secret = credentials.API_SECRET_KEY
-        access_token = credentials.ACCESS_TOKEN
-        access_secret = credentials.ACCESS_TOKEN_SECRET
+        api_key = credentials.TWIT_API_KEY
+        api_secret = credentials.TWIT_API_SECRET_KEY
+        access_token = credentials.TWIT_ACCESS_TOKEN
+        access_secret = credentials.TWIT_ACCESS_TOKEN_SECRET
     except KeyError:
         sys.stderr.write("Couldn't find credentials. Have you created a credentials.py file with the right token names?\n")
         sys.exit(1)
@@ -148,7 +152,7 @@ def get_twitter_client(): #We set up the client
     return client #Now we have a client object to use in our code.
 ```
 
-## Test it out {#Step-8}
+## Test it out
 
 Whew! We now have our auth tokens and have define a client that uses them to access the API. Let's test out our client by grabbing some of our own most recent tweets.
 
