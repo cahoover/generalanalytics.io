@@ -19,13 +19,13 @@ menu:
 weight: 2
 ---
 
-Google Tag Manager makes it easy to place snippets of code, called *tags*, on a website or app without having to directly access the code of the website. Instead of asking an engineer to place different tags over and over, the idea is to instead add a special tag container to your site. Every time someone visits your page, the container will check the Tag Manager website for any tags you put there. If it finds any, it'll load them on your site.
+Google Tag Manager makes it easy to place snippets of code, called **tags**, on a website or app without having to directly access the code of the website. Instead of asking an engineer to place different tags over and over, the idea is to instead add a special tag container to your site. Every time someone visits your page, the container will check the Tag Manager website for any tags you put there. If it finds any, it'll load them on your site.
 
 ![GTM getting tags](./GTMa.png)
 
 Tags are often, not not exclusively, used to inform external tools such as Google Analytics about user behavior on the site. You put the Google Analytics tag onto the Tag Manager website, when your page loads the tag container on your site will retrieve the tag and you'll send data to Google Analytics.     
 
-Tag manager is flexible - it doesn't just grab every tag and immediately run them when a page loads. Instead, tags are always associated with a _triggering event_. What you are saying is "When *triggering event* happens, tell *tag* about it."
+Tag manager is flexible - it doesn't just grab every tag and immediately run them when a page loads. Instead, tags are always associated with a **triggering event**. What you are saying is "When **triggering event** happens, tell **tag** about it."
 
 To understand how this works, we need to briefly talk about cookies and pixels.
 
