@@ -12,7 +12,7 @@ date: "2020-06-27"
 draft: false
 menu:
   DataAccess:
-    parent: Google Tag Manager Basics
+    parent: "Intro: Tag Manager"
     weight: 1
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
