@@ -34,6 +34,13 @@ body {
   background-image: linear-gradient(to bottom, rgba(55, 125, 255, 0.075) 0%, rgba(55, 125, 255, 0.15) 100%);
 }
 
+.article-style img {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
 #experience .card-text {
   font-family: Montserrat;
   padding-top: 30px;
